@@ -1,0 +1,28 @@
+// = Spreadsheet (dashboards)
+// ============================================================================
+// o-spreadsheet renders the grid and charts on canvas and darkens them with a
+// CSS filter (invert + hue-rotate + contrast(.85)), which leaves texts dull.
+// Add some contrast/brightness on top of it; the background ends up close to
+// the webclient one.
+
+$o-spreadsheet-dark-filter: var(--os-dark-mode-filter) contrast(1.15) brightness(1.15);
+
+.o_web_client .o-spreadsheet.dark .os-theme-dependant {
+  filter: $o-spreadsheet-dark-filter;
+}
+
+// Sample dashboards (shown while there is no data yet) embed their charts as
+// light-mode PNG snapshots (image figures, not theme dependant) on a white
+// figure background: darken them with the same filter.
+.o_web_client
+  .o-sample-dashboard
+  .o-spreadsheet.dark
+  .o-figure-wrapper:not(.os-theme-dependant) {
+  filter: $o-spreadsheet-dark-filter;
+}
+
+// Core fades sample figures to 40% (spreadsheet_dashboard.scss); on a dark
+// background that leaves light texts too dull, so fade them less.
+.o_web_client .o-sample-dashboard .o-figure {
+  opacity: 0.75;
+}

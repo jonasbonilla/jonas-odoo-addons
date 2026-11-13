@@ -1,0 +1,10 @@
+// = Properties
+// ============================================================================
+// Property type icons are dark PNG glyphs, invisible on a dark background.
+
+.o_field_property_definition_type,
+.o_field_property_definition_type_menu {
+  img {
+    filter: invert(1);
+  }
+}

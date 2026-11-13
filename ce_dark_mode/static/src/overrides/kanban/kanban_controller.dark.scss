@@ -1,0 +1,13 @@
+// = Kanban
+// ============================================================================
+// Column/record highlights are tuned for a light background: the selected
+// record color is a hardcoded light cyan (#d1ecf1) and the others rely on
+// tint-color(), which darkens in dark mode.
+
+.o_kanban_renderer {
+  // Column hovered while dragging a record.
+  --KanbanColumn__highlight-background: #{mix($o-action, $o-gray-100, 15%)};
+  // Records selected (multi-selection) and their focus outline.
+  --KanbanColumn__highlight-selected: #{mix($o-info, $o-view-background-color, 20%)};
+  --KanbanColumn__highlight-selected-border: #{lighten($o-action, 10%)};
+}

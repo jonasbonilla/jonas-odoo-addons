@@ -1,0 +1,12 @@
+// = Statusbar
+// ============================================================================
+// The current stage uses $o-component-active-bg (20% of the action color over
+// gray-100), almost the same tone as the view background in dark mode: give
+// it a stronger tint so the current stage is easy to spot.
+
+.o_field_statusbar
+  > .o_statusbar_status
+  .o_arrow_button.o_arrow_button_current:not(.d-none) {
+  --#{$prefix}btn-disabled-bg: #{mix($o-action, $o-view-background-color, 45%)};
+  --#{$prefix}btn-disabled-color: #{$o-black};
+}

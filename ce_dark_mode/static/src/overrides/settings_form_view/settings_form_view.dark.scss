@@ -1,0 +1,8 @@
+// = Settings
+// ============================================================================
+// Section titles use gray-200, which is also the view background in dark mode:
+// raise them one step so they stand out, as in the light theme.
+
+.o_base_settings_view .o_form_renderer {
+  --settings__title-bg: #{$o-gray-300};
+}
