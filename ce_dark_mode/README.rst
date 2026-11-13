@@ -37,6 +37,27 @@ Per-user dark mode for the Odoo Community backend.
 Community only: Enterprise ships its own dark mode, so this module
 cannot be installed together with ``web_enterprise``.
 
+**List view**
+
+|List view|
+
+**Form view with chatter**
+
+|Form view|
+
+**Kanban view**
+
+|Kanban view|
+
+**Spreadsheet dashboard**
+
+|Spreadsheet dashboard|
+
+.. |List view| image:: https://raw.githubusercontent.com/jonasbonilla/jonas-odoo-addons/20.0/ce_dark_mode/static/description/list_view.png
+.. |Form view| image:: https://raw.githubusercontent.com/jonasbonilla/jonas-odoo-addons/20.0/ce_dark_mode/static/description/form_view.png
+.. |Kanban view| image:: https://raw.githubusercontent.com/jonasbonilla/jonas-odoo-addons/20.0/ce_dark_mode/static/description/kanban_view.png
+.. |Spreadsheet dashboard| image:: https://raw.githubusercontent.com/jonasbonilla/jonas-odoo-addons/20.0/ce_dark_mode/static/description/spreadsheet_dashboard.png
+
 **Table of contents**
 
 .. contents::
@@ -49,11 +70,19 @@ Each user can switch the scheme in two ways:
 
 - **User menu** (avatar, top right): toggle **Dark Mode**. The page
   reloads with the new scheme.
+
+  |User menu|
+
 - **My Profile / Preferences**: set **Color Scheme** to *Light* or
   *Dark*, save, and reload the page.
 
+  |Preferences|
+
 Administrators can also set it for any internal user from *Settings >
 Users*.
+
+.. |User menu| image:: https://raw.githubusercontent.com/jonasbonilla/jonas-odoo-addons/20.0/ce_dark_mode/static/description/user_menu.png
+.. |Preferences| image:: https://raw.githubusercontent.com/jonasbonilla/jonas-odoo-addons/20.0/ce_dark_mode/static/description/preferences.png
 
 Bug Tracker
 ===========
@@ -72,6 +101,13 @@ Authors
 -------
 
 * Jonas Bonilla
+
+Other credits
+-------------
+
+- Module icon inspired by `Tabler Icons <https://tabler.io/icons>`__
+  (``sun-moon``, `MIT
+  License <https://github.com/tabler/tabler-icons/blob/main/LICENSE>`__).
 
 Maintainers
 -----------

@@ -12,3 +12,19 @@ Per-user dark mode for the Odoo Community backend.
 
 Community only: Enterprise ships its own dark mode, so this module cannot be
 installed together with `web_enterprise`.
+
+**List view**
+
+![List view](https://raw.githubusercontent.com/jonasbonilla/jonas-odoo-addons/20.0/ce_dark_mode/static/description/list_view.png)
+
+**Form view with chatter**
+
+![Form view](https://raw.githubusercontent.com/jonasbonilla/jonas-odoo-addons/20.0/ce_dark_mode/static/description/form_view.png)
+
+**Kanban view**
+
+![Kanban view](https://raw.githubusercontent.com/jonasbonilla/jonas-odoo-addons/20.0/ce_dark_mode/static/description/kanban_view.png)
+
+**Spreadsheet dashboard**
+
+![Spreadsheet dashboard](https://raw.githubusercontent.com/jonasbonilla/jonas-odoo-addons/20.0/ce_dark_mode/static/description/spreadsheet_dashboard.png)
