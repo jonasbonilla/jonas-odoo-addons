@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Odoo / herramientas
+*.log
+.ruff_cache/
+*.orig
+*.rej
+*~
+*.swp
+
+# IDE / SO
+.idea/
+.vscode/
+.DS_Store
+
+# Node (si se usan linters JS)
+node_modules/
