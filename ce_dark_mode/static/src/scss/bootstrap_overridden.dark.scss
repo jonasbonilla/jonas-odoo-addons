@@ -1,0 +1,97 @@
+// = Dark color scheme: Bootstrap & derived variables
+// ============================================================================
+// Inserted *before* web/static/src/scss/bootstrap_overridden.scss in the dark
+// bundles, so primary/secondary variables (brand colors included) are already
+// known here.
+
+// Links and text-primary: the brand color is too dark to be read as text.
+$o-main-link-color: lighten($o-brand-primary, 15%);
+$o-theme-text-colors: map-merge(
+  $o-theme-text-colors,
+  (
+    "primary": lighten($o-brand-primary, 15%),
+  )
+);
+
+// Primary buttons keep white text ($o-white is now a dark tone).
+$o-btns-bs-override: map-merge(
+  $o-btns-bs-override,
+  (
+    "primary": map-merge(
+        map-get($o-btns-bs-override, "primary"),
+        (
+          color: #ffffff,
+          hover-background: lighten($o-brand-primary, 5%),
+          hover-border: lighten($o-brand-primary, 5%),
+          hover-color: #ffffff,
+          active-background: mix($o-brand-primary, $o-view-background-color, 25%),
+          active-color: lighten($o-brand-primary, 25%),
+          disabled-color: #ffffff,
+        )
+      ),
+    // Light buttons (internal links, sidebar togglers...) use $o-white as
+    // background, which is pure black here: blend them with the views.
+    "light": map-merge(
+        map-get($o-btns-bs-override, "light"),
+        (
+          background: $o-view-background-color,
+          border: $o-view-background-color,
+          hover-background: $o-gray-300,
+          hover-border: $o-gray-300,
+          disabled-background: $o-view-background-color,
+          disabled-border: $o-view-background-color,
+        )
+      ),
+  )
+);
+
+// color-contrast(): keep the light-mode behavior (white text on colored
+// backgrounds when contrast allows it).
+$color-contrast-light: #ffffff !default;
+$color-contrast-dark: $o-white !default;
+
+// Elevated surfaces use the view background instead of $white / body-bg.
+// Dropdowns and popovers float above the views: one step lighter.
+$dropdown-bg: $o-gray-300 !default;
+$dropdown-border-color: $o-gray-400 !default;
+$popover-bg: $o-gray-300 !default;
+$popover-border-color: $o-gray-400 !default;
+$nav-tabs-link-active-bg: $o-view-background-color !default;
+$toast-background-color: rgba($o-view-background-color, 0.9) !default;
+
+$tooltip-bg: $o-gray-300 !default;
+$tooltip-color: $o-gray-900 !default;
+
+// Checkbox tick and switch knob stay white on the brand color.
+$form-check-input-checked-color: #ffffff !default;
+$form-check-input-indeterminate-color: #ffffff !default;
+$form-switch-checked-color: #ffffff !default;
+
+$input-placeholder-color: $o-gray-500 !default;
+
+// Shadows and backdrops must stay black ($black is now a light tone).
+$modal-backdrop-bg: #000000 !default;
+$modal-backdrop-opacity: 0.5 !default;
+$box-shadow: 0 0.5rem 1rem rgba(#000000, 0.45) !default;
+$box-shadow-sm: 0 0.125rem 0.25rem rgba(#000000, 0.35) !default;
+$box-shadow-lg: 0 1rem 3rem rgba(#000000, 0.5) !default;
+$box-shadow-inset: inset 0 1px 2px rgba(#000000, 0.3) !default;
+
+// Bootstrap color scales ($purple-100…900, *-bg-subtle, *-text-emphasis,
+// alerts, list-group variants...): same inverted convention as the grays,
+// "tint" goes towards the view background (not pure black, or alerts and
+// table variants look like holes) and "shade" towards the light text.
+// Must be defined before bootstrap/scss/_variables.scss computes the scales.
+@function tint-color($color, $weight) {
+  @return mix($o-view-background-color, $color, $weight);
+}
+@function shade-color($color, $weight) {
+  @return mix($o-black, $color, $weight);
+}
+
+// Neutral subtle colors (alert-secondary, alert-light, bg-*-subtle) are built
+// from the gray scale, not from tint-color(): raise them above the views.
+$secondary-bg-subtle: $o-gray-300 !default;
+$secondary-border-subtle: $o-gray-400 !default;
+$light-bg-subtle: mix($o-gray-200, $o-gray-300) !default;
+$light-border-subtle: $o-gray-300 !default;

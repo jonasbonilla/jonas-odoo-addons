@@ -1,0 +1,9 @@
+// = Smart buttons
+// ============================================================================
+// Icons and values use the raw brand color, too dark on a dark background:
+// use the lightened primary text color instead.
+
+.o-form-buttonbox {
+  --o-stat-text-color: #{o-text-color("primary")};
+  --o-stat-button-color: #{o-text-color("primary")};
+}

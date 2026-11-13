@@ -6,6 +6,7 @@ Módulos para Odoo 20.0 Community.
 
 | Módulo | Versión | Descripción |
 | ------ | ------- | ----------- |
+| [ce_dark_mode](ce_dark_mode/) | 20.0.1.0.0 | Modo oscuro por usuario para el backend (solo Community) |
 
 ## Instalación
 

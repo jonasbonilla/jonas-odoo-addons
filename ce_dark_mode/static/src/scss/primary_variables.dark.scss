@@ -1,0 +1,68 @@
+// = Dark color scheme: base palette
+// ============================================================================
+// Inserted *before* web/static/src/scss/primary_variables.scss in the dark
+// bundles. Everything keeps `!default`: a theme module that defines a value
+// earlier (e.g. brand colors) still wins, while the `!default` values of web,
+// declared later, are ignored.
+//
+// Convention shared with the core `*.dark.scss` files: the gray scale is
+// inverted, `$o-white` is the darkest tone and `$o-black` the lightest one.
+
+$o-webclient-color-scheme: dark !default;
+
+// Same tones as Odoo's own dark mode (17-19), so both editions look alike.
+$o-white: #000000 !default;
+$o-black: #ffffff !default;
+
+$o-gray-100: #1b1d26 !default; // webclient background
+$o-gray-200: #262a36 !default; // views
+$o-gray-300: #3c3e4b !default; // borders, secondary buttons
+$o-gray-400: #5a5e6b !default;
+$o-gray-500: #6b707f !default;
+$o-gray-600: #7e8392 !default;
+$o-gray-700: #b1b3bc !default;
+$o-gray-800: #d1d1d1 !default;
+$o-gray-900: #e4e4e4 !default; // main text
+
+// Views (sheet, list, kanban, modal, card) sit slightly above the webclient
+// background, as an elevated surface.
+$o-view-background-color: $o-gray-200 !default;
+
+$o-shadow-color: #000000 !default;
+$o-form-lightsecondary: $o-gray-300 !default;
+$o-main-code-color: #f0609e !default;
+$o-list-group-active-bg: mix(#17a2b8, $o-view-background-color, 25%) !default;
+
+// Contextual text colors, lightened to stay readable on dark surfaces.
+$o-theme-text-colors: (
+  "success": #4cc27a,
+  "info": #4fb3d9,
+  "warning": #e8b23a,
+  "danger": #f0716b,
+) !default;
+
+// Tags & badges (o_tag_color_N, o_badge_color_N): same hues as the light
+// palette (see $o-colors-border), on a dark tinted background with light text.
+$o-colors-bg-subtle:
+  mix(#8f8f8f, $o-view-background-color, 25%),
+  mix(#d76a58, $o-view-background-color, 25%),
+  mix(#cc7724, $o-view-background-color, 25%),
+  mix(#c09910, $o-view-background-color, 25%),
+  mix(#179dc5, $o-view-background-color, 25%),
+  mix(#b271c6, $o-view-background-color, 25%),
+  mix(#af8563, $o-view-background-color, 25%),
+  mix(#17a49d, $o-view-background-color, 25%),
+  mix(#5d8ee4, $o-view-background-color, 25%),
+  mix(#d06792, $o-view-background-color, 25%),
+  mix(#4ca65a, $o-view-background-color, 25%),
+  mix(#8f7ede, $o-view-background-color, 25%) !default;
+$o-colors-text-emphasis:
+  mix(#ffffff, #8f8f8f, 50%), mix(#ffffff, #d76a58, 50%), mix(#ffffff, #cc7724, 50%),
+  mix(#ffffff, #c09910, 50%), mix(#ffffff, #179dc5, 50%), mix(#ffffff, #b271c6, 50%),
+  mix(#ffffff, #af8563, 50%), mix(#ffffff, #17a49d, 50%), mix(#ffffff, #5d8ee4, 50%),
+  mix(#ffffff, #d06792, 50%), mix(#ffffff, #4ca65a, 50%), mix(#ffffff, #8f7ede, 50%) !default;
+
+// Navbar: entries stay white on the brand-colored bar.
+$o-navbar-entry-color: rgba(#ffffff, 0.9) !default;
+$o-navbar-entry-color--hover: #ffffff !default;
+$o-navbar-badge-text-shadow: 1px 1px 0 rgba(#000000, 0.3) !default;

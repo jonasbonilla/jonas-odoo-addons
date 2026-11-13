@@ -1,0 +1,10 @@
+// = Dropdowns & popovers
+// ============================================================================
+// Their background is gray-300, the same tone as borders and input underlines:
+// raise those one step so they remain visible inside.
+
+.o-dropdown--menu,
+.o_popover {
+  --border-color: #{$o-gray-400};
+  --o-input-border-color: #{$o-gray-400};
+}
