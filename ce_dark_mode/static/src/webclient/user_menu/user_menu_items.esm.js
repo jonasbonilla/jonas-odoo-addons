@@ -1,11 +1,9 @@
-/** @odoo-module **/
-
-import {usePlugin} from "@odoo/owl";
+import {ORM} from "@web/core/orm_plugin";
+import {_t} from "@web/core/l10n/translation";
 import {browser} from "@web/core/browser/browser";
 import {cookie} from "@web/core/browser/cookie";
-import {_t} from "@web/core/l10n/translation";
-import {ORM} from "@web/core/orm_plugin";
 import {registry} from "@web/core/registry";
+import {usePlugin} from "@odoo/owl";
 import {user} from "@web/core/user";
 
 export function colorSchemeSwitchItem() {
