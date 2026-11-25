@@ -10,4 +10,7 @@ Each user can switch the scheme in two ways:
 
   ![Preferences](https://raw.githubusercontent.com/jonasbonilla/jonas-odoo-addons/20.0/ce_dark_mode/static/description/preferences.png)
 
+Only the current tab switches: other open tabs keep their scheme, including
+the graph and pivot views they open, until they are reloaded.
+
 Administrators can also set it for any internal user from *Settings > Users*.

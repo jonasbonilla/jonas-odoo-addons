@@ -28,7 +28,7 @@ msgstr "Oscuro"
 
 #. module: ce_dark_mode
 #. odoo-javascript
-#: code:addons/ce_dark_mode/static/src/webclient/user_menu/user_menu_items.js:0
+#: code:addons/ce_dark_mode/static/src/webclient/user_menu/user_menu_items.esm.js:0
 msgid "Dark Mode"
 msgstr "Modo oscuro"
 
