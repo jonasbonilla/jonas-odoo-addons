@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
+  <!-- XML ids: these views keep their original ids instead of reusing the
+       parent ids (view_users_form_simple_modif, view_users_form). Renaming
+       them creates new views on update, while modules that load later in the
+       graph (e.g. website and its required ir.ui.view.visibility) are not in
+       the registry yet: the insert fails on databases already installed. -->
   <record id="view_users_form_simple_modif_color_scheme" model="ir.ui.view">
-    <field name="name">res.users.preferences.form.color_scheme</field>
+    <field name="name">res.users.preferences.form.inherit.color_scheme</field>
     <field name="model">res.users</field>
     <field name="inherit_id" ref="base.view_users_form_simple_modif" />
     <field name="arch" type="xml">
@@ -17,7 +22,7 @@
   </record>
 
   <record id="view_users_form_color_scheme" model="ir.ui.view">
-    <field name="name">res.users.form.color_scheme</field>
+    <field name="name">res.users.form.inherit.color_scheme</field>
     <field name="model">res.users</field>
     <field name="inherit_id" ref="base.view_users_form" />
     <field name="arch" type="xml">
